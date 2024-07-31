@@ -1,0 +1,116 @@
+body {
+  background-color: skyblue;
+  font-family: Arial, sans-serif;
+}
+
+.body_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-right: 50px;
+  margin-top: 20px !important;
+}
+
+
+.fa-plus {
+  float: right;
+  font-size: 14px;
+}
+
+.fas {
+  font-size: 15px;
+}
+
+.container_ofd {
+  margin: 15px;
+  width: 100%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px; /* Reduced padding */
+  text-align: center;
+  background-color: #f1f1f1;
+  transition: transform 0.2s; /* Animation */
+  height: 150px; /* Reduced height */
+  margin-top: 20px; /* Reduced top margin */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+  background-color: aqua;
+}
+
+.card-body i {
+  font-size: 48px; /* Increase icon size */
+}
+
+.card-link {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit !important; /* Inherit text color */
+  cursor: pointer;
+}
+
+.card-body p {
+  margin: 10px 0 0; /* Add some margin above text */
+  text-align: center; /* Center text horizontally */
+}
+
+@media (max-width: 767.98px) {
+  .card {
+      width: 100%;
+  }
+}
+
+/* Accordion styles */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 20px 20px;
+  width: 265px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: 3px;
+}
+
+.accordion-container {
+  flex: 2;
+  margin-left: 0px; /* Adjusted margin to create space between containers */
+  background-color: #fff;
+  margin-top: 33px; 
+  padding: 20px; /* Added padding to create space around the accordion */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for better visibility */
+  border-radius: 8px; /* Optional: rounds the corners of the container */
+  width: auto!important; /* Set the width to 300px */
+  height: auto; /* Ensure the height adjusts to the content */
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 10px 10px;
+  background-color: rgb(255, 255, 255);
+  display: none;
+  overflow: hidden;
+  width: 265px;
+}
+
+.panel a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  font-size: 14px;
+  margin: 20px 0; /* Space between links */
+}
+.pa_count {
+    font-size: 14px;
+    color: #292929;
+    float: inline-end;
+    
+}

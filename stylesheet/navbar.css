@@ -1,0 +1,228 @@
+/* Navbar styles */
+.nbf_navbar-container {
+    background-color: #041224; /* Dark blue-black background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    margin-top: -10px;
+}
+
+/* Navbar left container */
+.nbf_navbar-left a {
+    color: white;
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nbf_navbar-left a:hover {
+    text-decoration: none !important;
+    color: white;
+}
+
+/* Navbar middle container */
+.nbf_navbar-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+.nbf_dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nbf_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 200px;
+    z-index: 1;
+    margin-top: 1px;
+}
+
+.nbf_dropdown-content a {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none !important;
+    display: block;
+    font-size: 14px;
+}
+
+.nbf_dropdown:hover .nbf_dropdown-content {
+    display: block;
+}
+
+.nbf_dropbtn {
+    background-color: #030520;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    /* Add transition for background and transform */
+}
+.nbf_dropbtn:hover{
+    background-color: #72707f;
+    transform: scale(1.05);
+}
+
+/* Submenu Styles */
+.nbf_submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: -50px;
+    margin-left: 0.1px;
+    
+}
+
+.nbf_submenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none !important;
+    display: block;
+    font-size: 14px;
+}
+
+.nbf_submenu a:hover {background-color: #f1f1f1}
+
+/* Show the submenu when the parent is clicked */
+.nbf_dropdown-content .nbf_submenu-toggle:hover + .nbf_submenu {
+    display: block;
+}
+
+.nbf_submenu-toggle {
+    position: relative;
+}
+.hidden {
+    display: none;
+}
+
+
+.nbf_submenu-toggle:after {
+    content: '\f0da'; /* Font Awesome icon for dropdown */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+}
+
+/* Submenu container */
+.nbf_submenu-container {
+    position: relative;
+}
+
+.nbf_submenu-container:hover .nbf_submenu {
+    display: block;
+}
+
+/* Navbar right container */
+.nbf_navbar-right {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Add margin-top for separation on smaller screens */
+}
+
+.nbf_search-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-right: 10px;
+    min-height: 1px;
+   
+}
+
+.nbf_search-container input[type=text] {
+    border: none;
+    padding: 6px;
+    width: 120px;
+    border-radius: 4px 0 0 4px;
+}
+
+.nbf_search-container input[type=text]:focus {
+    outline: none;
+    font-size: 13px;
+}
+
+.nbf_search-container button[type=submit] {
+    border: none;
+    background: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.nbf_search-container button[type=submit]:hover {
+    background: #ddd;
+}
+
+.nbf_profile-dropdown {
+    position: relative;
+}
+
+.nbf_profile-dropdown .nbf_dropbtn {
+    color: #fff;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.nbf_profile-dropdown .nbf_dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Align dropdown below the button */
+    background-color: #ffffff;
+    min-width: 115px;
+    z-index: 1;
+    margin-left: -30px;
+}
+
+.nbf_profile-dropdown .nbf_dropdown-content a {
+    color: #040727;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+.nbf_dropdown-content a:hover {
+    background-color:#e4e3eb;
+    text-decoration: none;
+    color: inherit;
+   
+
+}
+
+.nbf_profile-dropdown:hover .nbf_dropdown-content {
+    display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nbf_navbar-middle, .nbf_navbar-right {
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nbf_search-container input[type=text] {
+        width: 100px;
+    }
+}
+@media (max-width: 480px) {
+    .nbf_navbar-middle, .nbf_navbar-right {
+        flex-basis: 100%;
+        justify-content: left;
+        margin-top: 10px;
+    }
+}

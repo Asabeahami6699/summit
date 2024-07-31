@@ -1,0 +1,188 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: skyblue;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.wrappers {
+    position: relative;
+    display: flex;
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    width: 100%;
+    height: 100%;              /* Ensure it takes the full height of the parent */
+}
+
+.indC_container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.indC-tabs {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.indC-tabs .button{
+    border-radius: 5px;
+}
+.indC-tablink {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    flex: 1;
+    max-width: 190px;
+    text-align: center;
+}
+
+.indC-tablink:hover {
+    background-color: #ddd;
+}
+
+.indC-tablink.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.indC-tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.indC-navigation-buttons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.indC-navigation-buttons button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.indC-navigation-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+fieldset {
+    border: 1px solid;
+    margin-bottom:10px;
+}
+
+fieldset .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+fieldset .input-field {
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 6px 0;
+}
+
+fieldset label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+fieldset input,
+fieldset select {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    width: 80%;
+    color: #000000 !important;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 10px;
+    height: 30px;
+}
+/* Adjustments for tablets */
+@media screen and (max-width: 768px) {
+    .indC_container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .fieldset .fields {
+        flex-direction: column;
+    }
+
+    .fieldset .input-field {
+        width: 100%;
+    }
+}
+
+/* Adjustments for mobile devices */
+@media screen and (max-width: 480px) {
+    .fieldset .input-field {
+        width: 100%;
+        margin: 1px 0;
+        flex-direction: column;
+    }
+}
+
+/* Preview grid adjustments */
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 35px;
+}
+
+@media (max-width: 768px) {
+    .preview-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 265px) {
+    .preview-grid {
+        grid-template-columns: 1fr;
+    }
+}
