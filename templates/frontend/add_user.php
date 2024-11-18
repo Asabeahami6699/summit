@@ -1,3 +1,12 @@
+<?php
+// Include the database connection file
+include '../db_connection.php';
+
+// Fetch all branches from the database
+$query = "SELECT branch_name FROM branch"; // Assuming the table is named 'branch'
+$result = $conn->query($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,10 +40,17 @@
                 </select>
                 <select name="branch" required>
                     <option value="" disabled selected>Select Branch</option>
-                    <option value="Aiyinasi">Aiyinasi</option>
-                    <option value="Prestea">Prestea</option>
-                    <option value="Bogoso">Bogoso</option>
-                    <option value="All">All Branches</option>
+                    <?php
+                    // Check if the query returned any results
+                    if ($result->num_rows > 0) {
+                        // Loop through the results and create an option for each branch
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<option value='" . $row['branch_name'] . "'>" . $row['branch_name'] . "</option>";
+                        }
+                    } else {
+                        echo "<option value=''>No branches available</option>";
+                    }
+                    ?>
                 </select>
             </div>
             <input type="submit" value="Register">
@@ -45,3 +61,8 @@
     <script src="/SUMMIT/javascript/add_user.js"></script>
 </body>
 </html>
+
+<?php
+// Close the database connection
+$conn->close();
+?>

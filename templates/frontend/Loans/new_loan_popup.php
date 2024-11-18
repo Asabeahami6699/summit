@@ -12,7 +12,7 @@
 <div id="clientPopup" class="popup">
     <div class="popup-content">
         <h2>Choose Client Type</h2>
-        <button class="popup-button" onclick="window.location.href='/SUMMIT/templates/frontend/clients/registrationform.php'">Individual Clients</button>
+        <button class="popup-button" onclick="window.location.href='/summit/templates/frontend/clients/individual_client_registration.php'">Individual Clients</button>
         <button class="popup-button" onclick="window.location.href='organization.html'">Organization Clients</button>
         <span class="close" onclick="closePopup('clientPopup')">&times;</span>
     </div>
@@ -22,7 +22,7 @@
     <div class="popup-content">
         <h2>Choose Loan Type</h2>
         <button class="popup-button" onclick="window.location.href='/SUMMIT/templates/frontend/Loans/individual_Loan_Application.php'">Individual Loan</button>
-        <button class="popup-button" onclick="window.location.href='/SUMMIT/templates/frontend/Loans/Group_Loan_Application.php'">Group Loan</button>
+        <button class="popup-button" onclick="window.location.href='/summit/templates/frontend/groups/group_registration.php'">Group Loan</button>
         <span class="close" onclick="closePopup('loanPopup')">&times;</span>
     </div>
 </div>

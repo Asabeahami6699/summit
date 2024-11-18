@@ -31,6 +31,8 @@ $homeUrl = isset($_SESSION['home_url']) ? $_SESSION['home_url'] : '/SUMMIT/templ
     <title>Admin Navbar</title>
     <link rel="stylesheet" type="text/css" href="\SUMMIT\stylesheet\navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CDN -->
+    <link rel="icon" href="\summit\image\favicon.jpg" type="image/x-icon">
+
 </head>
 <body>
 
@@ -47,7 +49,7 @@ $homeUrl = isset($_SESSION['home_url']) ? $_SESSION['home_url'] : '/SUMMIT/templ
                 <div class="nbf_submenu-container">
                     <a href="#" class="nbf_submenu-toggle">Add New Client</a>
                     <div class="nbf_submenu">
-                        <a href="\SUMMIT\templates\frontend\clients\registrationform.php">Individuals</a>
+                        <a href="\summit\templates\frontend\clients\individual_client_registration.php">Individuals</a>
                         <a href="#">Organizations</a>
                     </div>
                 </div>
@@ -55,11 +57,11 @@ $homeUrl = isset($_SESSION['home_url']) ? $_SESSION['home_url'] : '/SUMMIT/templ
                 <div class="nbf_submenu-container">
                     <a href="#" class="nbf_submenu-toggle">List Client</a>
                         <div class="nbf_submenu">
-                            <a href="#">Active Clients</a>
-                            <a href="#">Pending Clients</a>
-                            <a href="#">Rejected Clients</a>
-                            <a href="#">Withdrawn Clients</a>
-                            <a href="#">Close Clients Account</a>
+                            <a href="\summit\templates\frontend\clients\client_status\active_clients.php">Active Clients</a>
+                            <a href="\summit\templates\frontend\clients\client_status\pending_clients.php">Pending Clients</a>
+                            <a href="\summit\templates\frontend\clients\client_status\rejected_clients.php">Rejected Clients</a>
+                            <a href="\summit\templates\frontend\clients\client_status\withdrawn_client.php">Withdrawn Clients</a>
+                            <a href="\summit\templates\frontend\clients\client_status\closed_clients.php">Close Clients Account</a>
                            
 
                     </div>
@@ -70,16 +72,16 @@ $homeUrl = isset($_SESSION['home_url']) ? $_SESSION['home_url'] : '/SUMMIT/templ
             <button class="nbf_dropbtn"> <i class="fa fa-users"></i> Group</button>
             <div class="nbf_dropdown-content">
                 <a href="\SUMMIT\templates\frontend\groups\group_management.php">Group Management</a>
-                <a href="#">Create New Group</a>
+                <a href="\summit\templates\frontend\groups\group_registration.php">Create New Group</a>
                 
 
             <div class="nbf_submenu-container">
                 <a href="#" class="nbf_submenu-toggle">List Group</a>
                 <div class="nbf_submenu">
-                        <a href="#">Active Group</a>
-                        <a href="#">Pending Group</a>
-                        <a href="#">Close Group Account</a>
-                        <a href="#">Fully paid Groups</a>   
+                        <a href="\summit\templates\frontend\groups\group_status\active_groups.php">Active Group</a>
+                        <a href="\summit\templates\frontend\groups\group_status\pending_groups.php">Pending Group</a>
+                        <a href="\summit\templates\frontend\groups\group_status\fullyPaid_groups.php">Fully paid Groups </a>
+                        <a href="\summit\templates\frontend\groups\group_status\closedGroupsAccounts.php">Close Group Account</a>   
                     </div>
                 </div>
             </div>

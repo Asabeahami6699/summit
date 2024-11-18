@@ -22,29 +22,27 @@ include '../header_bar.php';
 
                 <h2>Groups</h2>
                 <div class="cm_client-type">
-                    <a href="registrationform.php"><h4>Create New Group </h4></a>
+                    <a href="\summit\templates\frontend\groups\group_registration.php"><h4>Create New Group </h4></a>
                 </div>
             </aside>
             <section class="cm_client-list">
                 <h2>Group List</h2>
                 <div class="cm_client-status">
-                    <a href="#">Active Groups</a>
+                    <a href="\summit\templates\frontend\groups\group_status\active_groups.php"> 🟩 Active Groups</a>
                     <span class="cm_count">(25)</span>
                 </div>
                 <div class="cm_client-status">
-                    <a href="#">Pending Groups</a>
+                    <a href="\summit\templates\frontend\groups\group_status\pending_groups.php">🟨 Pending Groups</a>
                     <span class="cm_count">(5)</span>
                 </div>
+
                 <div class="cm_client-status">
-                    <a href="#">Rejected Groups</a>
-                    <span class="cm_count">(2)</span>
+                    <a href="\summit\templates\frontend\groups\group_status\fullyPaid_groups.php">✅ Fully Paid Groups</a>
+                    <span class="cm_count">(4 from database)</span>
                 </div>
+                
                 <div class="cm_client-status">
-                    <a href="#">Withdrawn Groups</a>
-                    <span class="cm_count">(3)</span>
-                </div>
-                <div class="cm_client-status">
-                    <a href="#">Closed Group Accounts</a>
+                    <a href="\summit\templates\frontend\groups\group_status\closedGroupsAccounts.php">⬛ Closed Group Accounts</a>
                     <span class="cm_count">(4 from database)</span>
                 </div>
             </section>

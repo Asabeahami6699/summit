@@ -82,6 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="/SUMMIT/stylesheet/loginstyle.css">
+    <link rel="icon" href="\summit\image\smc.png" type="image/x-icon">
 </head>
 <body>
     <div class="login-card">

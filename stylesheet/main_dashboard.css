@@ -38,9 +38,13 @@ body {
 
 .card:hover {
   transform: scale(1.05); /* Zoom effect on hover */
-  background-color: aqua;
+  background: aqua;
+ 
+  box-shadow: 
+  0 0 10px rgb(255, 0, 221), /* Pink shadow */
+  0 0 20px rgb(104, 66, 255), /* Purple shadow */
+  0 0 30px rgb(0, 217, 255); /* Blue shadow */
 }
-
 .card-body i {
   font-size: 48px; /* Increase icon size */
 }

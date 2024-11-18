@@ -43,27 +43,33 @@ include '../header_bar.php';
             <section class="cm_client-list">
                 <h2>Loan List</h2>
                 <div class="cm_client-status">
-                    <a href="#">Active Loans</a>
+                    <a href="\summit\templates\frontend\Loans\Loan_status\active_Loans.php">🟩 Active Loans</a>
                     <span class="cm_count">(25)</span>
                 </div>
                 <div class="cm_client-status">
-                    <a href="#">Pending Loans</a>
+                    <a href="\SUMMIT\templates\frontend\Loans\Loan_status\awaiting_approvals.php">🟨 Awaiting Approvals</a>
+                            
                     <span class="cm_count">(5)</span>
                 </div>
                 <div class="cm_client-status">
-                    <a href="#">Rejected Loans</a>
-                    <span class="cm_count">(2)</span>
-                </div>
-                <div class="cm_client-status">
-                    <a href="#">Withdrawn Loans</a>
+                <a href="\SUMMIT\templates\frontend\Loans\Loan_status\awaiting_disbursal.php">🟦 Awaiting Disbursal</a>
                     <span class="cm_count">(3)</span>
                 </div>
                 <div class="cm_client-status">
-                    <a href="#">Overdue Loans</a>
+                <a href="\SUMMIT\templates\frontend\Loans\Loan_status\rejected_loans.php">❌ Rejected Loans</a>
+                    <span class="cm_count">(2)</span>
+                </div>
+                <div class="cm_client-status">
+                <a href="\SUMMIT\templates\frontend\Loans\Loan_status\fullyPaid_loans.php">✅ Fully Paid Loans</a>
+                    <span class="cm_count">(2)</span>
+                </div>
+
+                <div class="cm_client-status">
+                    <a href="#">🟫 Overdue Loans</a>
                     <span class="cm_count">(4 from database)</span>
                 </div>
                 <div class="cm_client-status">
-                    <a href="#">Closed Loans Accounts</a>
+                    <a href="#">⬛ Closed Loans Accounts</a>
                     <span class="cm_count">(4 from database)</span>
                 </div>
             </section>

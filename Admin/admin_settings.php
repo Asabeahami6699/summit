@@ -36,6 +36,8 @@
     <?php include '..\templates\frontend\add_user.php'?>
     <?php include '..\templates\frontend\delete_user.php'?>
     <?php include '..\templates\frontend\update_user.php'?>
+    <?php include 'create_new_branch.php'?>
+    
     <button id="deactivate-account">Deactivate Account</button>
 </section>
 

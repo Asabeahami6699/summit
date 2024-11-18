@@ -22,7 +22,7 @@ include '../header_bar.php';
 
                 <h2>Clients</h2>
                 <div class="cm_client-type">
-                    <a href="registrationform.php"><h4>Individual Clients</h4></a>
+                    <a href="\summit\templates\frontend\groups\individual_client_registration.php"><h4>Individual Clients</h4></a>
                 </div>
                 <div class="cm_client-type">
                     <a href="#"><h4>Organization Clients</h4></a>
@@ -31,23 +31,23 @@ include '../header_bar.php';
             <section class="cm_client-list">
                 <h2>Client List</h2>
                 <div class="cm_client-status">
-                    <a href="#">Active Clients</a>
+                    <a href="\summit\templates\frontend\clients\client_status\active_clients.php">🟩 Active Clients</a>
                     <span class="cm_count">(25)</span>
                 </div>
                 <div class="cm_client-status">
-                    <a href="#">Pending Clients</a>
+                    <a href="\summit\templates\frontend\clients\client_status\pending_clients.php">🟨 Pending Clients</a>
                     <span class="cm_count">(5)</span>
                 </div>
                 <div class="cm_client-status">
-                    <a href="#">Rejected Clients</a>
+                    <a href="\summit\templates\frontend\clients\client_status\rejected_clients.php">🟥 Rejected Clients</a>
                     <span class="cm_count">(2)</span>
                 </div>
                 <div class="cm_client-status">
-                    <a href="#">Withdrawn Clients</a>
+                    <a href="\summit\templates\frontend\clients\client_status\withdrawn_client.php">🟫 Withdrawn Clients</a>
                     <span class="cm_count">(3)</span>
                 </div>
                 <div class="cm_client-status">
-                    <a href="#">Closed Client Accounts</a>
+                    <a href="\summit\templates\frontend\clients\client_status\closed_clients.php">⬛Closed Client Accounts</a>
                     <span class="cm_count">(4 from database)</span>
                 </div>
             </section>
