@@ -59,7 +59,7 @@
                     <div class="card">
                         <div class="card-body">
                             <i class="fas fa-search" style="font-size:35px"></i>
-                            <p>Search</p>
+                            <p>Transfer</p>
                         </div>
                     </div>
                 </a>

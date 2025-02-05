@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function downloadFile(format) {
     try {
-        const response = await fetch('http://localhost/summit/backend/fetch_data.php'); // Replace with your fetch URL
+        const response = await fetch('http://localhost/summit/backend/fetch_all_data.php'); // Replace with your fetch URL
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

@@ -20,7 +20,7 @@
             <!-- Branch Creation Form -->
             <form action="\summit\backend\create_branch_backend.php" method="POST">
                 <input type="text" name="branch_name" placeholder="Branch Name" required>
-                <input type="text" name="location" placeholder="Branch Location" required>
+                <input type="text" name="branch_location" placeholder="Branch Location" required>
                 <button type="submit">Create Branch</button>
             </form>
         

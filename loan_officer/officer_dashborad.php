@@ -16,6 +16,7 @@ $branch = $_SESSION['branch'];
 $firstname = $_SESSION['firstname'];
 
 
+
 $pageTitle = 'Officer Dashboard';
 include $_SERVER['DOCUMENT_ROOT'] . '/summit/templates/frontend/navbar.php';
 ?>

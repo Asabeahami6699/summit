@@ -97,54 +97,60 @@ $pageTitle = isset($pageTitle) ? $pageTitle : 'Active Clients';
 <script>
   // Dummy data with structure matching the table
   const loans = [
-    { id: 1, externalId: 'EXT-001', clientName: 'John Doe', phone: '123-456-7890', status: 'Active', branch: 'Main Branch', loanOfficer: 'Alice Johnson' },
-    { id: 2, externalId: 'EXT-002', clientName: 'Jane Smith', phone: '987-654-3210', status: 'Overdue', branch: 'Downtown Branch', loanOfficer: 'Bob Williams' }
-    // Add more data as needed
-  ];
+  { id: 1, externalId: 'EXT-001', clientName: 'John Doe', phone: '123-456-7890', status: 'Active', branch: 'Main Branch', loanOfficer: 'Alice Johnson' },
+  { id: 2, externalId: 'EXT-002', clientName: 'Jane Smith', phone: '987-654-3210', status: 'Overdue', branch: 'Downtown Branch', loanOfficer: 'Bob Williams' }
+  // Add more data as needed
+];
 
-  // Function to populate the table with data
-  function populateTable() {
-    const tableBody = document.getElementById('loanTableBody');
-    tableBody.innerHTML = ''; // Clear existing rows
+// Function to populate the table with data
+function populateTable() {
+  const tableBody = document.getElementById('loanTableBody');
+  tableBody.innerHTML = ''; // Clear existing rows
 
-    loans.forEach(loan => {
-      const row = document.createElement('tr');
-      row.classList.add('clickable-row');
-      row.setAttribute('data-id', loan.id);
-      row.innerHTML = `
-        <td>${loan.id}</td>
-        <td>${loan.externalId}</td>
-        <td>${loan.clientName}</td>
-        <td>${loan.phone}</td>
-        <td>${loan.status}</td>
-        <td>${loan.branch}</td>
-        <td>${loan.loanOfficer}</td>
-        <td>
-          <i class="fas fa-eye" title="View" onclick="viewLoan(${loan.id})" style="cursor: pointer; margin-right: 10px;"></i>
-          <i class="fas fa-pen" title="Edit" onclick="editLoan(${loan.id})" style="cursor: pointer;"></i>
-        </td>
-      `;
-      tableBody.appendChild(row);
+  loans.forEach(loan => {
+    const row = document.createElement('tr');
+    row.classList.add('clickable-row');
+    row.setAttribute('data-id', loan.id);
+    row.style.cursor = 'pointer';
+
+    // Add click event to the entire row
+    row.addEventListener('click', () => {
+      window.location.href = `/summit/templates/frontend/clients/client_details.php?id=${loan.id}`;
     });
-  }
 
-  // Functions for view and edit actions
-  function viewLoan(id) {
-    console.log('Viewing Loan ID:', id);
-    // Implement view functionality, e.g., redirect to a details page
-    // window.location.href = `/loan-details.php?id=${id}`;
-  }
-
-  function editLoan(id) {
-    console.log('Editing Loan ID:', id);
-    // Implement edit functionality, e.g., redirect to an edit page
-    // window.location.href = `/loan-edit.php?id=${id}`;
-  }
-
-  // Call populateTable function on page load
-  document.addEventListener('DOMContentLoaded', () => {
-    populateTable();
+    row.innerHTML = `
+      <td>${loan.id}</td>
+      <td>${loan.externalId}</td>
+      <td>${loan.clientName}</td>
+      <td>${loan.phone}</td>
+      <td>${loan.status}</td>
+      <td>${loan.branch}</td>
+      <td>${loan.loanOfficer}</td>
+      <td>
+        <i class="fas fa-eye" title="View" onclick="event.stopPropagation(); viewLoan(${loan.id})" style="cursor: pointer; margin-right: 10px;"></i>
+        <i class="fas fa-pen" title="Edit" onclick="event.stopPropagation(); editLoan(${loan.id})" style="cursor: pointer;"></i>
+      </td>
+    `;
+    tableBody.appendChild(row);
   });
+}
+
+// Functions for view and edit actions
+function viewLoan(id) {
+  console.log('Viewing Loan ID:', id);
+  window.location.href = `/summit/templates/frontend/clients/client_details.php?id=${id}`;
+}
+
+function editLoan(id) {
+  console.log('Editing Loan ID:', id);
+  window.location.href = `/summit/templates/frontend/clients/client_edit.php?id=${id}`;
+}
+
+// Call populateTable function on page load
+document.addEventListener('DOMContentLoaded', () => {
+  populateTable();
+});
+
 </script>
 
 <!-- Font Awesome for icons -->

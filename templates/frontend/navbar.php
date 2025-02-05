@@ -50,7 +50,7 @@ $homeUrl = isset($_SESSION['home_url']) ? $_SESSION['home_url'] : '/SUMMIT/templ
                     <a href="#" class="nbf_submenu-toggle">Add New Client</a>
                     <div class="nbf_submenu">
                         <a href="\summit\templates\frontend\clients\individual_client_registration.php">Individuals</a>
-                        <a href="#">Organizations</a>
+                        <a href="\summit\templates\frontend\Loans\Loan_Details.php">Organizations</a>
                     </div>
                 </div>
 

@@ -1,0 +1,24 @@
+.card-body {
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  body {
+    background-color: skyblue;
+  }
+  .clickable-row {
+    cursor: pointer;
+  }
+  .clickable-row:hover {
+    background-color: #f1f1f1; /* Light grey background on hover */
+  }
+ 
+  .border-box {
+  border: 3px solid black; /* Black border */
+  border-radius: 10px;     /* Rounded corners */
+  text-align: center;      /* Centered text */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  color: black;            /* Text color */
+  font-weight: bold;       /* Bold font style */
+  background-color: white; /* Light background */
+  width: fit-content;      /* Adjust width based on content */
+
+}

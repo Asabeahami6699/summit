@@ -5,7 +5,7 @@
 include '..\db_connection.php';
 
 // Create the query to get the data
-$query = "SELECT * FROM client_identity";  // Adjust table name as needed
+$query = "SELECT * FROM users";  // Adjust table name as needed
 
 // Execute the query
 $result = mysqli_query($conn, $query);
